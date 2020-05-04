@@ -1,4 +1,4 @@
-package com.sky7th.domaindrivendesignpart1;
+package com.sky7th.domaindrivendesign.part1;
 
 import com.sky7th.domaindrivendesign.part1.Money;
 import org.junit.jupiter.api.DisplayName;

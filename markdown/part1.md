@@ -1,5 +1,6 @@
-### [Domain-Driven Design의 적용](http://aeternum.egloos.com/m/1105776) 시리즈를 공부하며 정리한 저장소입니다.
+### [Domain-Driven Design의 적용](http://aeternum.egloos.com/m/1105776) 시리즈를 공부하며 정리한 내용입니다.
 
+### [예제](https://github.com/sky7th/domain-driven-design/tree/master/src/main/java/com/sky7th/domaindrivendesign/part1)
 
 # PART 1. VALUE OBJECT와 REFERENCE OBJECT
 
@@ -58,21 +59,18 @@ REFERENCE OBJECT에 대한 별칭 문제는 피할 수 없다. **REFERENCE OBJEC
 **REFERENCE OBJECT를 다룰 때는 오직 하나의 객체만이 생성**되고 동일한 객체를 시스템의 필요 부분으로 전달하기 위한 생명 주기 제어 메커니즘이 필요하다.
 
 ## 생명 주기 제어
-특정한 작업을 수행하기 위해서는 얽히고 설킨 수 많은 객체들 중 어떤 객체에서 항해를 시작할 것인지를 결정해야 한다.
+특정한 작업을 수행하기 위해서는 얽히고 설킨 수 많은 객체들 중 **어떤 객체에서 항해를 시작할 것인지를 결정**해야 한다.
 
-객체 그래프 상에서 항해를 시작하기 위한 시작 객체를 ENTRY POINT라고 한다. 객체 그룹의 ENTRY POINT는 항상 REFERENCE OBJECT여야 한다.
+객체 그래프 상에서 항해를 시작하기 위한 **시작 객체를 ENTRY POINT라고 한다.** 객체 그룹의 ENTRY POINT는 항상 REFERENCE OBJECT여야 한다.
 
-사용자 요청이 시스템 내에 도착하면 시스템은 요청을 처리할 객체 그룹을 찾는다. 이 객체 그룹 중 ENTRY POINT에 해당하는 REFERENCE OBJECT가 그룹을 대표하여 요청을 전달받고 작업을 수행하기 위해 필요한 객체들과의 협력을 통해 요청을 완수한다.
+사용자 요청이 시스템 내에 도착하면 시스템은 요청을 처리할 객체 그룹을 찾는다. 이 객체 그룹 중 **ENTRY POINT에 해당하는 REFERENCE OBJECT가 그룹을 대표하여 요청을 전달받고** 작업을 수행하기 위해 필요한 **객체들과의 협력을 통해 요청을 완수한다.**
 
-시스템은 임의의 ENTRY POINT에 접근 가능해야 한다. 또한 ENTRY POINT는 REFERENCE OBJECT이므로 ENTRY POINT에 접근할 때마다 동일한 객체 인스턴스를 반환 받아야 한다.
+시스템은 임의의 ENTRY POINT에 접근 가능해야 한다. 또한 ENTRY POINT는 REFERENCE OBJECT이므로 **ENTRY POINT에 접근할 때마다 동일한 객체 인스턴스를 반환 받아야 한다.**
 
-이처럼 ENTRY POINT의 유일성과 추적성을 유지하기 위해서는 ENTRY POINT를 관리하는 특별한 객체가 필요하다. 이 특별한 객체는 특정한 ENTRY POINT의 목록을 유지하고 클라이언트에 ENTRY POINT에 대한 관리 인터페이스를 제공한다. 즉 ENTRY POINT와 관련된 추가, 수정, 삭제, 조회 등의 컬렉션 처리를 수행한다.
+이처럼 **ENTRY POINT의 유일성과 추적성을 유지하기 위해서는 ENTRY POINT를 관리하는 특별한 객체가 필요하다.** 이 특별한 객체는 특정한 ENTRY POINT의 목록을 유지하고 클라이언트에 ENTRY POINT에 대한 관리 인터페이스를 제공한다. 즉 ENTRY POINT와 관련된 추가, 수정, 삭제, 조회 등의 컬렉션 처리를 수행한다.
 
 ENTRY POINT에 대한 관리 인터페이스를 구성하는 방법에는 두 가지가 존재한다.
 - 각각의 ENTRY POINT가 스스로 관리 인터페이스를 제공한다.
 - 별도의 객체가 ENTRY POINT에 대한 관리 인터페이스를 제공한다.
 
-두 방법 모두 생성된 ENTRY POINT를 메모리 내에서 검색하기 위한 메커니즘을 필요로 한다.   이를 처리하기 위해 ENTRY POINT는 메모리 내에서 자신을 손쉽게 검색할 수 있도록 검색 키를 제공해야 한다.
-
-코드를 작성하기 전에 테스트를 작성하는 것은 좋은 습관이다.
-
+두 방법 모두 생성된 ENTRY POINT를 메모리 내에서 검색하기 위한 메커니즘을 필요로 한다. 이를 처리하기 위해 **ENTRY POINT는 메모리 내에서 자신을 손쉽게 검색할 수 있도록 검색 키를 제공해야 한다.**

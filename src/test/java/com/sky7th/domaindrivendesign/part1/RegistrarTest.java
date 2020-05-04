@@ -1,4 +1,4 @@
-package com.sky7th.domaindrivendesignpart1;
+package com.sky7th.domaindrivendesign.part1;
 
 import java.util.Collection;
 import java.util.Collections;
