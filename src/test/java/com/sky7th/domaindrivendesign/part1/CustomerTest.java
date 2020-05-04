@@ -32,9 +32,11 @@ class CustomerTest {
     @Test
     void testCustomerIdentical() {
         // given
-        Customer customer = new Customer("CUST-01", "홍길동", "경기도 안양시").persist();
+        CustomerRepository customerRepository = new CustomerRepository();
+        Customer customer = new Customer("CUST-01", "홍길동", "경기도 안양시");
+        customerRepository.save(customer);
         // when
-        Customer anotherCustomer = Customer.find("CUST-01");
+        Customer anotherCustomer = customerRepository.find("CUST-01");
         // then
         assertSame(customer, anotherCustomer);
     }

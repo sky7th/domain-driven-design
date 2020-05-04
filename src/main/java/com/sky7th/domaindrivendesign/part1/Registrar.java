@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Registrar {
+
     private static Registrar soleInstance = new Registrar();
     private Map<Class<?>,Map<String,EntryPoint>> entryPoints = new HashMap<Class<?>, Map<String, EntryPoint>>();
 

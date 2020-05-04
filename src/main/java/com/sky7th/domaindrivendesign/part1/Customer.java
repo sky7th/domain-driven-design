@@ -13,14 +13,6 @@ public class Customer extends EntryPoint {
         this.address = address;
     }
 
-    public static Customer find(String customerName) {
-        return (Customer)Registrar.get(Customer.class, customerName);
-    }
-
-    public Customer persist() {
-        return (Customer)super.persist();
-    }
-
     public void purchase(long price) {
         mileage += price * 0.01;
     }

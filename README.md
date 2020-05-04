@@ -6,4 +6,5 @@
 - **별칭(aliasing) 문제**
 - **불변성**
 - **생명 주기 제어**
+- **도메인의 복잡성**
 - **[예제](https://github.com/sky7th/domain-driven-design/tree/master/src/main/java/com/sky7th/domaindrivendesign/part1)**
