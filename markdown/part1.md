@@ -1,4 +1,4 @@
-### [Domain-Driven Design의 적용](http://aeternum.egloos.com/m/1105776) 시리즈를 공부하며 정리한 내용입니다.
+### [Domain-Driven Design의 적용](http://aeternum.egloos.com/page/114) 시리즈를 공부하며 정리한 내용입니다.
 
 ### [예제](https://github.com/sky7th/domain-driven-design/tree/master/src/main/java/com/sky7th/domaindrivendesign/part1)
 
