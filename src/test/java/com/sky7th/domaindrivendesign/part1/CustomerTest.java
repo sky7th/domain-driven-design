@@ -1,7 +1,5 @@
 package com.sky7th.domaindrivendesign.part1;
 
-import com.sky7th.domaindrivendesign.part1.Customer;
-import com.sky7th.domaindrivendesign.part1.Registrar;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

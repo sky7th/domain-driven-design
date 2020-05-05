@@ -1,10 +1,7 @@
 package com.sky7th.domaindrivendesign.part1;
 
-import com.sky7th.domaindrivendesign.part1.Money;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import java.math.BigDecimal;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
