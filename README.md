@@ -14,3 +14,11 @@
 - **AGGREGATE**
 - **REPOSITORY**
 - **[예제](https://github.com/sky7th/domain-driven-design/tree/master/src/main/java/com/sky7th/domaindrivendesign/part2)**
+
+## [PART 3. Dependency Injection과 Aspect-Oriented Programming](https://github.com/sky7th/domain-driven-design/blob/master/markdown/part3.md)
+- **도메인 객체의 생명주기**
+- **객체 그리고 영속성(Persistence)**
+- **영속성(Persistence)과 REPOSITORY**
+- **결합도**
+- **의존성 주입**
+- **AOP**
